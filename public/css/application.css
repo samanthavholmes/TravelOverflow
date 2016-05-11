@@ -19,21 +19,21 @@ body {
   color: white;
   float: right;
   margin-top: -1em;
-  margin-right: 25em;
+  margin-right: 15%;
 }
 
 #top-header-profile a {
   color: white;
   float: right;
   margin-top: -1em;
-  margin-right: 3em;
+  margin-right: 2%;
 }
 
 #top-header-signup a {
   color: white;
   float: right;
   margin-top: -1em;
-  margin-right: 3em;
+  margin-right: 2%;
 }
 
 #logo-header {
@@ -45,7 +45,7 @@ body {
 }
 
 #logo a {
-  margin-left: 10em;
+  margin-left: 15%;
   top: 2.5em;
   position: fixed;
   width: -webkit-fit-content;
@@ -53,7 +53,7 @@ body {
 }
 
 #logo a:hover {
-  margin-left: 10em;
+  margin-left: 15%;
   top: 2.5em;
   position: fixed;
   width: -webkit-fit-content;
@@ -61,7 +61,7 @@ body {
 }
 
 #logo a:visited {
-  margin-left: 10em;
+  margin-left: 15%;
   top: 2.5em;
   position: fixed;
   width: -webkit-fit-content;
@@ -77,7 +77,7 @@ body {
   color: white;
   float: right;
   top: 1.5em;
-  margin-right: 18em;
+  margin-right: 15%;
 }
 
 #ask-a-question-button a:hover {
@@ -89,7 +89,7 @@ body {
   color: white;
   float: right;
   top: 1.5em;
-  margin-right: 18em;
+  margin-right: 15%;
 }
 
 .questions-button a {
@@ -101,7 +101,7 @@ body {
   color: white;
   float: right;
   top: 1.5em;
-  margin-right: 2em;
+  margin-right: 2%;
 }
 
 .questions-button a:hover {
@@ -113,6 +113,6 @@ body {
   color: white;
   float: right;
   top: 1.5em;
-  margin-right: 2em;
+  margin-right: 2%;
 }
 
