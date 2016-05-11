@@ -1,0 +1,13 @@
+<h1>Register for TravelOverflow!</h1>
+
+<% if @errors %>
+  <% errors.each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+<form action = "/users" method = "POST">
+  <input type = "text" name= "user[username]" placeholder = "username">
+  <input type = "text" name= "user[password]" placeholder = "password">
+  <input type = "submit" value = "Register">
+</form>
