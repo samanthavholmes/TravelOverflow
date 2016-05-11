@@ -1,5 +1,9 @@
 body {
   background-color: #E7E7E7;
+}
+
+.container {
+  margin-top: 20em;
   text-align: center;
 }
 
@@ -8,63 +12,107 @@ body {
   height: 2em;
   width: 100%;
   position: absolute;
-  top: 0px;
+  top: 0;
 }
 
 #top-header-login a {
   color: white;
   float: right;
-  margin-top: .5em;
+  margin-top: -1em;
   margin-right: 25em;
 }
 
 #top-header-profile a {
   color: white;
   float: right;
-  margin-top: .5em;
+  margin-top: -1em;
   margin-right: 3em;
 }
 
 #top-header-signup a {
   color: white;
   float: right;
-  margin-top: .5em;
+  margin-top: -1em;
   margin-right: 3em;
 }
 
 #logo-header {
   height: 8em;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 2em;
   padding-right: 10em;
 }
 
 #logo a {
   margin-left: 10em;
-  margin-top: 1.5em;
+  top: 2.5em;
   position: fixed;
   width: -webkit-fit-content;
+  color: black;
+}
+
+#logo a:hover {
+  margin-left: 10em;
+  top: 2.5em;
+  position: fixed;
+  width: -webkit-fit-content;
+  color: black;
+}
+
+#logo a:visited {
+  margin-left: 10em;
+  top: 2.5em;
+  position: fixed;
+  width: -webkit-fit-content;
+  color: black;
 }
 
 #ask-a-question-button a {
   background-color: #9FA6AD;
+  position: relative;
   font-weight: normal;
   width: -webkit-fit-content;
   padding: .5em;
   color: white;
   float: right;
-  margin-top: 2.25em;
+  top: 1.5em;
   margin-right: 18em;
 }
 
-.header-button a {
+#ask-a-question-button a:hover {
   background-color: #9FA6AD;
+  position: relative;
   font-weight: normal;
   width: -webkit-fit-content;
   padding: .5em;
   color: white;
   float: right;
-  margin-top: 2.25em;
+  top: 1.5em;
+  margin-right: 18em;
+}
+
+.questions-button a {
+  background-color: #9FA6AD;
+  font-weight: normal;
+  position: relative;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
   margin-right: 2em;
 }
+
+.questions-button a:hover {
+  background-color: #9FA6AD;
+  font-weight: normal;
+  position: relative;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
+  margin-right: 2em;
+}
+
