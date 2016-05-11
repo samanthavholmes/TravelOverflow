@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -15,9 +15,28 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>TravelOverflow</title>
 </head>
 <body>
+
+  <div id="top-header">
+    <%if logged_in? %>
+        <!-- These need to have links added to them, and then in the css, specify "a" -->
+        <h5 id="top-header-login"><a href="/logout">logout</a></h5>
+        <h5 id="top-header-profile"><a href="/users/<%= current_user.id %>">profile</a></h5>
+    <% else %>
+        <h5 id="top-header-login"><a href="/login">login</a></h5>
+    <% end %>
+    <h5 id="top-header-signup"><a href="/users/new">signup</a></h5>
+  </div>
+
+  <div id="logo-header">
+    <h1 id="logo"><a href="/">TravelOverflow</a></h1>
+    <h3 id="ask-a-question-button"><a href="/questions/new">Ask a Question</a></h3>
+    <h3 class="questions-button"><a href="/questions">Questions</a></h3>
+
+  </div>
+
   <%= yield %>
 </body>
 </html>

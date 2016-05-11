@@ -1,0 +1,118 @@
+body {
+  background-color: #E7E7E7;
+}
+
+.container {
+  margin-top: 20em;
+  text-align: center;
+}
+
+#top-header {
+  background-color: #606060;
+  height: 2em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#top-header-login a {
+  color: white;
+  float: right;
+  margin-top: -1em;
+  margin-right: 15%;
+}
+
+#top-header-profile a {
+  color: white;
+  float: right;
+  margin-top: -1em;
+  margin-right: 2%;
+}
+
+#top-header-signup a {
+  color: white;
+  float: right;
+  margin-top: -1em;
+  margin-right: 2%;
+}
+
+#logo-header {
+  height: 8em;
+  width: 100%;
+  position: absolute;
+  top: 2em;
+  padding-right: 10em;
+}
+
+#logo a {
+  margin-left: 15%;
+  top: 2.5em;
+  position: fixed;
+  width: -webkit-fit-content;
+  color: black;
+}
+
+#logo a:hover {
+  margin-left: 15%;
+  top: 2.5em;
+  position: fixed;
+  width: -webkit-fit-content;
+  color: black;
+}
+
+#logo a:visited {
+  margin-left: 15%;
+  top: 2.5em;
+  position: fixed;
+  width: -webkit-fit-content;
+  color: black;
+}
+
+#ask-a-question-button a {
+  background-color: #9FA6AD;
+  position: relative;
+  font-weight: normal;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
+  margin-right: 15%;
+}
+
+#ask-a-question-button a:hover {
+  background-color: #9FA6AD;
+  position: relative;
+  font-weight: normal;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
+  margin-right: 15%;
+}
+
+.questions-button a {
+  background-color: #9FA6AD;
+  font-weight: normal;
+  position: relative;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
+  margin-right: 2%;
+}
+
+.questions-button a:hover {
+  background-color: #9FA6AD;
+  font-weight: normal;
+  position: relative;
+  width: -webkit-fit-content;
+  padding: .5em;
+  color: white;
+  float: right;
+  top: 1.5em;
+  margin-right: 2%;
+}
+
