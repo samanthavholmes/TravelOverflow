@@ -1,0 +1,13 @@
+<div class= "container">
+  <h1>Create a New Answer</h1>
+
+  <h3><%= erb :'/_errors', layout: false %></h3>
+
+  <%=@question.title%>
+  <%=@question.description%>
+
+  <form action = "/questions/<%=@question.id%>" method = "POST">
+    <input type ="text" name= "description" placeholder= "Your Answer">
+    <input type ="submit" value= "Submit Answer">
+  </form>
+</div>
