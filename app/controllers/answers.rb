@@ -1,7 +1,18 @@
-get '/questions/:question_id/answers' do
+post '/questions/:question_id/answers' do
   @question = Question.find_by(id: params[:question_id])
-  @answers = Answer.where(question_id: params[:question_id])
-  erb :'/answers/show'
+  @answer = Answer.new(description: params[:description])
+  @answers = @question.answers
+  if @answer.save
+    @question.answers << @answer
+    if request.xhr?
+      params[:id] = @answer.id
+      params.to_json
+    else
+      redirect '/questions/:id'
+    end
+  else
+    redirect "/questions/#{@question.id}/answers/new"
+  end
 end
 
 get '/questions/:question_id/answers/new' do

@@ -27,18 +27,3 @@ get '/questions/:id' do
   @answers = Answer.where(question_id: params[:id])
   erb :'/questions/show'
 end
-
-post '/questions/:id' do
-  @question = Question.find_by(id: params[:id])
-  @answer = Answer.find_by(description: params[:description])
-  if !@answer
-    @answer = Answer.new(description: params[:description])
-  end
-  @answers = @question.answers
-  if @answer.save
-    @question.answers << @answer
-    erb :"/answers/show"
-  else
-    redirect "/questions/#{@question.id}/answers/new"
-  end
-end

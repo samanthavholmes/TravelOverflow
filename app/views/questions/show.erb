@@ -3,15 +3,20 @@
 
   <p><%=@question.description%></p>
 
-    <ul id= "#answer-list">
+    <ul id= "answer-list">
     <% @answers.each do |answer| %>
     <li>
       <a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>">
         <%=answer.description%>
       </a></li>
-        <a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>/comments/new" >Add a comment</a>
+        <li><a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>/comments/new" >Add a comment</a></li>
     <% end %>
   </ul>
 
-  <h3><a href= "/questions/<%=@question.id%>/answers/new">Add an Answer</a></h3>
+  <h3><a id= "add-answer-button" href= "/questions/<%=@question.id%>/answers/new">Add an Answer</a></h3>
+
+    <form id= "answer-form" action = "/questions/<%=@question.id%>/answers" method = "POST" class= "hidden">
+    <input type ="text" name= "description" placeholder= "Your Answer">
+    <input type ="submit" value= "Submit Answer">
+  </form>
 </div>
