@@ -27,7 +27,10 @@ $(document).ready(function() {
       data: data
     });
     ajaxRequest.done(function(response){
-      $('#question-list').append(response);
+      $('.title-box').val('');
+      $('.description-box').val('');
+      $('#question-form').hide();
+      $('.question-table').prepend(response);
     });
   });
     $('#add-answer-button').on("click", function(e){

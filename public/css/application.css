@@ -4,6 +4,37 @@ body {
 .container {
   margin-top: 12em;
   text-align: center;
+  padding-bottom: 5em;
+}
+
+#question-form {
+  background-color: #3A5863;
+  width: 44em;
+  height: 22em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.white {
+  color: white;
+}
+
+.title-box {
+  height: 2em;
+  width: 30em;
+}
+
+.description-box {
+  height: 8em;
+  width: 30em;
+  word-wrap: break-word;
+  display: inline;
+  margin-top: 0;
+}
+.vote-button {
+  font-size: 12px;
+  display: inline-block;
+  float: right;
 }
 
 .question-table {
@@ -21,10 +52,36 @@ body {
 
 .question-table a {
   color: white;
+}
 
-}.question-table a:hover {
+.question-table a:hover {
   color: #D86E3E;
 }
+
+.question-title {
+  width: 55em;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 5px solid;
+  border-color: #D86E3E;
+  color: #3A5863;
+  margin-bottom: 0;
+}
+
+.question-description {
+  margin-left: auto;
+  margin-right: auto;
+  width: 55em;
+  padding-right: 5em;
+  padding-left: 5em;
+}
+
+.question-description p {
+  font-size: 120%;
+  color: #3A5863;
+  word-wrap: break-word;
+}
+
 
 #top-header {
   background-color: #3A5863;
