@@ -12,8 +12,7 @@ post '/questions' do
   if @question.save
     current_user.questions << @question
     if request.xhr?
-      params[:id] = @question.id
-      params.to_json
+      erb :'/questions/_individual_question', layout: false, locals: {question: @question, answer: @answer}
     else
       redirect '/questions'
     end

@@ -3,8 +3,7 @@
 
   <ul>
     <% @comments.each do |comment| %>
-    <li>
-        <%=comment.description%></li>
+      <%= erb :'/comments/_individual_comment', locals: {answer: answer, question: @question, comment: @comment} %>
     <% end %>
   </ul>
 

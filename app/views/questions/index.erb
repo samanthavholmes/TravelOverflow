@@ -3,7 +3,7 @@
 
   <ul id = "question-list">
     <% @questions.each do |question| %>
-    <li><a id = "question-title" href="/questions/<%=question.id%>"><%=question.title%></a></li>
+      <%= erb :'/questions/_individual_question', locals: {question: question} %>
     <% end %>
   </ul>
 

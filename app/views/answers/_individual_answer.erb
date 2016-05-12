@@ -1,0 +1,9 @@
+<li>
+  <%=answer.description%></li>
+
+<a class= 'add-answer-comment-link' href= "#" >Add a comment to this answer</a><br>
+
+  <form action = "/questions/<%=question.id%>/answers/<%=answer.id%>/answer_comment" method = "POST" class= "answer-comment-form hidden">
+    <input id= "answer-comment-description" type ="text" name= "description" placeholder= "Your Comment">
+    <input type ="submit" value= "Submit Comment">
+  </form>
