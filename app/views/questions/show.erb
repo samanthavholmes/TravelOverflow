@@ -3,6 +3,8 @@
 
   <p><%=@question.description%></p>
 
+  <%= erb :_vote_button %>
+
     <ul id= "answer-list">
     <% @answers.each do |answer| %>
     <li>

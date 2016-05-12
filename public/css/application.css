@@ -1,19 +1,67 @@
 body {
   background-color: #E7E7E7;
 }
-
 .container {
-  margin-top: 20em;
+  margin-top: 12em;
   text-align: center;
 }
 
+.question-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-table td {
+  padding: 2em;
+  background-color: #3A5863;
+  border: .5em solid;
+  border-color: #E7E7E7;
+  width: 40em;
+}
+
+.question-table a {
+  color: white;
+
+}.question-table a:hover {
+  color: #D86E3E;
+}
+
 #top-header {
-  background-color: #606060;
+  background-color: #3A5863;
   height: 2em;
   width: 100%;
   position: absolute;
   top: 0;
 }
+
+#footer {
+  background-color: #3A5863;
+  height: 4em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+#copyright {
+  color: white;
+  padding-left: 15%;
+  position: absolute;
+}
+
+#creators a {
+  color: white;
+  padding-right: 15%;
+  float: right;
+  position: relative;
+}
+
+#creators a:hover {
+  color: #D86E3E;
+  padding-right: 15%;
+  float: right;
+  position: relative;
+}
+
 
 #top-header-login a {
   color: white;
@@ -52,7 +100,7 @@ body {
 
 
 #ask-a-question-button a {
-  background-color: #9FA6AD;
+  background-color: #3A5863;
   position: relative;
   font-weight: normal;
   width: -webkit-fit-content;
@@ -64,7 +112,7 @@ body {
 }
 
 #ask-a-question-button a:hover {
-  background-color: #9FA6AD;
+  background-color: #3A5863;
   position: relative;
   font-weight: normal;
   width: -webkit-fit-content;
@@ -76,7 +124,7 @@ body {
 }
 
 .questions-button a {
-  background-color: #9FA6AD;
+  background-color: #3A5863;
   font-weight: normal;
   position: relative;
   width: -webkit-fit-content;
@@ -88,7 +136,7 @@ body {
 }
 
 .questions-button a:hover {
-  background-color: #9FA6AD;
+  background-color: #3A5863;
   font-weight: normal;
   position: relative;
   width: -webkit-fit-content;
