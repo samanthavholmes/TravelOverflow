@@ -99,3 +99,7 @@ body {
   margin-right: 2%;
 }
 
+.hidden {
+  display: none;
+}
+
