@@ -16,10 +16,11 @@ $(document).ready(function() {
     });
     ajaxRequest.done(function(response){
       var questionObject = JSON.parse(response);
-      var questionLink = $('#question-list').find("a").eq(0).clone();
-      questionLink.text(questionObject.question.title);
+      var questionLink = $('#question-list').find("li").eq(0).clone();
+      questionLink.find("a").text(questionObject.question.title);
       questionLink.attr("href", "/questions/" + questionObject.id);
       $('#question-list').append(questionLink);
+      $('#answer-list').append($('#comment-link'));
     });
   });
     $('#add-answer-button').on("click", function(e){
@@ -39,10 +40,11 @@ $(document).ready(function() {
     });
     ajaxRequest.done(function(response){
       var answerObject = JSON.parse(response);
-      var answerLink = $('#answer-list').find("a").eq(0).clone();
-      answerLink.text(answerObject.description);
+      var answerLink = $('#answer-list').find("li").eq(0).clone();
+      answerLink.find("a").text(answerObject.description);
       answerLink.attr("href", "/answers/" + answerObject.id);
       $('#answer-list').append(answerLink);
+      $('#answer-list').append($('#comment-link'));
     });
   });
 });

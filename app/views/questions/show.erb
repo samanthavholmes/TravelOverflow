@@ -9,7 +9,7 @@
       <a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>">
         <%=answer.description%>
       </a></li>
-        <li><a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>/comments/new" >Add a comment</a></li>
+        <a id= 'comment-link' href= "/questions/<%=@question.id%>/answers/<%=answer.id%>/comments/new" >Add a comment</a><br>
     <% end %>
   </ul>
 
