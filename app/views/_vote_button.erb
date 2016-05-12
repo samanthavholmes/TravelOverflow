@@ -1,9 +1,9 @@
 <form method="post" action="/questions/<%= @question.id%>/upvote" class="vote">
-  Up <button type="submit" name="submit_param" value="submit_value" class="upvote"></button>
+  Up <button type="submit" name="submit_param" value="submit_value"></button>
 </form>
 
 <form method="post" action="/questions/<%= @question.id%>/downvote" class="vote">
-  Down <button type="submit" name="submit_param" value="submit_value" class="downvote"></button>
+  Down <button type="submit" name="submit_param" value="submit_value"></button>
 </form>
 
  Points:<span class="total-points"> <%= @question.points %></span>
