@@ -57,18 +57,22 @@ $(document).ready(function() {
     $(this).hide()
     $('#' + e.target.parentElement.id + ' form').show();
     $('.answer a').show();
-    $('#' + e.target.parentElement.id + ' form').on("submit", function(e){
+  $('#' + e.target.parentElement.id + ' form').on("submit", function(e){
     e.preventDefault();
     var data = $(e.target).serialize();
     var url = e.target.action;
     var type = e.target.method;
-    var ajaxRequest = $.ajax({
+    $.ajax({
       url: url,
       type: type,
       data: data
-    });
-    ajaxRequest.done(function(response){
-      $('#answer-comment-list').append(response);
+    }).done(function(response){
+      if (e.target.parentElement.id == 1) {
+        $('ul.answer-comment-list').eq(0).append(response);
+      }
+      else{
+        $('#' + e.target.parentElement.id + ' ul.answer-comment-list').append(response);
+      };
       $('#' + e.target.parentElement.id + ' form').children('#answer-comment-description').val('');
     });
     });
