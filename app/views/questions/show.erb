@@ -1,7 +1,9 @@
 <div class= "container">
-  <h1><%=@question.title%></h1>
+  <div class="question-title">
+  <h1><%=@question.title%><span class="vote-button"><%= erb :_vote_button %></span></h1>
+  </div>
 
-  <p><%=@question.description%></p>
+  <p class="question-description"><%=@question.description%></p>
 
   <ul id ="question-comment-list">
       <% @question.comments.each do |comment| %>
@@ -24,7 +26,7 @@
     <input type ="submit" value= "Submit Comment">
   </form>
 
-  <%= erb :_vote_button %>
+
 
     <ul id= "answer-list">
     <% @answers.each do |answer| %>

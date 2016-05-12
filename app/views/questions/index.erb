@@ -1,22 +1,21 @@
 <div class= "container">
   <h1>Questions</h1>
 
-  <table class="question-table">
-    <% @questions.each do |question| %>
-      <%= erb :'/questions/_individual_question', locals: {question: question} %>
-    <tr>
-      <td><a id = "question-title" href="/questions/<%=question.id%>"><%=question.title%></a></td>
-    </tr>
-    <% end %>
-  </table>
-
   <h3><%= erb :'/_errors', layout: false %></h3>
-
   <form id = "question-form" class = "hidden" action = "/questions" method = "POST">
-    <input type ="text" name= "question[title]" placeholder= "Title">
-    <input type ="text" name= "question[description]" placeholder= "description">
+    <br>
+  <h3 class="white">Ask a Question</h3><br>
+    <input type ="text" name= "question[title]" placeholder= "Title" class="title-box"><br><br>
+    <input type ="text" name= "question[description]" placeholder= "description" class="description-box"><br><br>
     <input type ="submit" value= "Create Question">
   </form>
 
+  <table class="question-table">
+    <% @questions.reverse.each do |question| %>
+
+    <%= erb :'/questions/_individual_question', locals: {question: question} %>
+
+    <% end %>
+  </table>
 
 </div>
