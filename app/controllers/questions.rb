@@ -10,6 +10,7 @@ end
 post '/questions' do
   @question = Question.new(params[:question])
   if @question.save
+    current_user.questions << @question
     if request.xhr?
       params[:id] = @question.id
       params.to_json
