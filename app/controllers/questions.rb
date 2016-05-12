@@ -10,7 +10,12 @@ end
 post '/questions' do
   @question = Question.new(params[:question])
   if @question.save
-    redirect "/questions"
+    if request.xhr?
+      params[:id] = @question.id
+      params.to_json
+    else
+      redirect '/questions'
+    end
   else
     @errors = @question.errors.full_messages
     erb :'/questions/new'
@@ -19,6 +24,7 @@ end
 
 get '/questions/:id' do
   @question = Question.find_by(id: params[:id])
+  @answers = Answer.where(question_id: params[:id])
   erb :'/questions/show'
 end
 
