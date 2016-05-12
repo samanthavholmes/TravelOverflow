@@ -6,6 +6,26 @@ body {
   text-align: center;
 }
 
+.question-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-table td {
+  padding: 2em;
+  background-color: #3A5863;
+  border: .5em solid;
+  border-color: #E7E7E7;
+  width: 40em;
+}
+
+.question-table a {
+  color: white;
+
+}.question-table a:hover {
+  color: #D86E3E;
+}
+
 #top-header {
   background-color: #3A5863;
   height: 2em;

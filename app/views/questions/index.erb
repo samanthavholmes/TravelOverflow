@@ -1,11 +1,13 @@
 <div class= "container">
   <h1>Questions</h1>
 
-  <ul id = "question-list">
+  <table class="question-table">
     <% @questions.each do |question| %>
-    <li><a id = "question-title" href="/questions/<%=question.id%>"><%=question.title%></a></li>
+    <tr>
+      <td><a id = "question-title" href="/questions/<%=question.id%>"><%=question.title%></a></td>
+    </tr>
     <% end %>
-  </ul>
+  </table>
 
   <h3><%= erb :'/_errors', layout: false %></h3>
 
