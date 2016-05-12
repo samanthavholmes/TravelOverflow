@@ -44,29 +44,12 @@ body {
   padding-right: 10em;
 }
 
-#logo a {
-  margin-left: 15%;
-  top: 2.5em;
-  position: fixed;
-  width: -webkit-fit-content;
-  color: black;
+#logo-header img {
+  position: absolute;
+  top: 2em;
+  padding-left: 15%;
 }
 
-#logo a:hover {
-  margin-left: 15%;
-  top: 2.5em;
-  position: fixed;
-  width: -webkit-fit-content;
-  color: black;
-}
-
-#logo a:visited {
-  margin-left: 15%;
-  top: 2.5em;
-  position: fixed;
-  width: -webkit-fit-content;
-  color: black;
-}
 
 #ask-a-question-button a {
   background-color: #9FA6AD;
