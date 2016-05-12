@@ -1,5 +1,40 @@
 <div class="container">
+  <h1>Welcome, <%= @user.username.capitalize %>!</h1>
 
+  <h2>Questions</h2>
+  <% @user_questions.each do |question| %>
+  <p><a href="/questions/<%=question.id%>"><%= question.title %></a></p>
+  <% end %>
+
+  <h2>Answers</h2>
+  <% @user_answers.each do |answer| %>
+  <% @question_answered %>
+  <p><a href="/questions/<%=@question_answered.id%>"><%=@question_answered.title%></a>  <%= answer.description %></p>
+  <% end %>
+
+  <h2>Comments on Questions</h2>
+  <% @user_comments.each do |comment| %>
+    <% if comment.commentable_type == "Question" %>
+      <% @commented_question_id = comment.commentable_id %>
+      <% @question_commented_on = Question.find_by(id: @commented_question_id)%>
+      <a href="/questions/<%=@commented_question_id%>"><%= @question_commented_on.title %></a>
+      <%= comment.description %>
+      <% end %>
+    <% end %>
+
+  <h2>Comments on Answers</h2>
+  <% @user_comments.each do |comment| %>
+    <% if comment.commentable_type == "Answer" %>
+      <% @commented_answer_id = comment.commentable_id %>
+      <% @answer_commented_on = Answer.find_by(id: @commented_answer_id)%>
+      <% @question_of_commented_answer = Question.find_by(id: @answer_commented_on.question_id) %>
+
+      <p>Question: <a href="/question/<%@question_of_commented_answer.id%>"><%=@question_of_commented_answer.title%></a></p>
+      <p>Answer:<%= @answer_commented_on.description %></p>
+      <p>Comment:<%= comment.description %></p>
+      <% end %>
+    <% end %>
 
 
 </div>
+
