@@ -3,19 +3,43 @@
 
   <p><%=@question.description%></p>
 
+  <ul id ="question-comment-list">
+      <% @question.comments.each do |comment| %>
+      <div class = "question">
+        <%= erb :'/comments/_individual_comment', locals: {answer: @answer, question: @question, comment: comment} %>
+      <% end %>
+    </ul>
+
+<a class= 'add-question-comment-link' href= "#" >Add a comment to this question</a><br>
+
+  <form action = "/questions/<%=@question.id%>/question_comment" method = "POST" class= "question-comment-form hidden">
+    <input id = "#question-comment-description" type ="text" name= "description" placeholder= "Your Comment">
+    <input type ="submit" value= "Submit Comment">
+  </form>
+
+ </div>
+
+  <form action = "/questions/<%=@question.id%>/question_comment" method = "POST" class= "comment-form hidden">
+    <input type ="text" name= "description" placeholder= "Your Comment">
+    <input type ="submit" value= "Submit Comment">
+  </form>
+
   <%= erb :_vote_button %>
 
     <ul id= "answer-list">
     <% @answers.each do |answer| %>
-    <li>
-      <a href= "/questions/<%=@question.id%>/answers/<%=answer.id%>">
-        <%=answer.description%>
-      </a></li>
-        <a id= 'comment-link' href= "/questions/<%=@question.id%>/answers/<%=answer.id%>/comments/new" >Add a comment</a><br>
+      <div class = "answer" id = "<%=answer.id%>">
+        <%= erb :'/answers/_individual_answer', locals: {answer: answer, question: @question} %>
+      </div>
+      <ul id ="answer-comment-list">
+          <% answer.comments.each do |comment| %>
+            <%= erb :'/comments/_individual_comment', locals: {answer: answer, question: @question, comment: comment} %>
+          <% end %>
+        </ul>
     <% end %>
   </ul>
 
-  <h3><a id= "add-answer-button" href= "/questions/<%=@question.id%>/answers/new">Add an Answer</a></h3>
+  <h3><a id= "add-answer-button" href= "#">Add an Answer</a></h3>
 
     <form id= "answer-form" action = "/questions/<%=@question.id%>/answers" method = "POST" class= "hidden">
     <input type ="text" name= "description" placeholder= "Your Answer">

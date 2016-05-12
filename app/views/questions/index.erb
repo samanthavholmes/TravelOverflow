@@ -3,6 +3,7 @@
 
   <table class="question-table">
     <% @questions.each do |question| %>
+      <%= erb :'/questions/_individual_question', locals: {question: question} %>
     <tr>
       <td><a id = "question-title" href="/questions/<%=question.id%>"><%=question.title%></a></td>
     </tr>
