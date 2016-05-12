@@ -1,4 +1,17 @@
 $(document).ready(function() {
+  $('.vote').on("submit", function(e){
+    e.preventDefault();
+    var url = e.target.action;
+    var type = e.target.method;
+    var ajaxRequest = $.ajax({
+      url: url,
+      type: type
+    });
+    ajaxRequest.done(function(response){
+      var voteObject = JSON.parse(response);
+      $(".total-points").text(voteObject.points);
+    })
+  });
   $('#ask-a-question-button').on("click", "a", function(e){
     e.preventDefault();
     $('#question-form').show();

@@ -24,6 +24,8 @@
     <input type ="submit" value= "Submit Comment">
   </form>
 
+  <%= erb :_vote_button %>
+
     <ul id= "answer-list">
     <% @answers.each do |answer| %>
       <div class = "answer" id = "<%=answer.id%>">

@@ -27,3 +27,25 @@ get '/questions/:id' do
   @answers = Answer.where(question_id: params[:id])
   erb :'/questions/show'
 end
+
+post '/questions/:id/upvote' do
+  @question = Question.find_by(id: params[:id])
+  @question.votes.create(value: 1)
+
+  if request.xhr?
+    {points: @question.points}.to_json
+  else
+    redirect "/questions/#{@question.id}"
+  end
+end
+
+post '/questions/:id/downvote' do
+  @question = Question.find_by(id: params[:id])
+  @question.votes.create(value: -1)
+
+  if request.xhr?
+    {points: @question.points}.to_json
+  else
+    redirect "/questions/#{@question.id}"
+  end
+end
