@@ -10,6 +10,7 @@ end
 post '/questions' do
   @question = Question.new(params[:question])
   if @question.save
+    current_user.questions << @question
     if request.xhr?
       params[:id] = @question.id
       params.to_json
@@ -37,6 +38,7 @@ post '/questions/:id' do
   @answers = @question.answers
   if @answer.save
     @question.answers << @answer
+    current_user.answers << @answer
     erb :"/answers/show"
   else
     redirect "/questions/#{@question.id}/answers/new"

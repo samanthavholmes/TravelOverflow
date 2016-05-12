@@ -10,6 +10,7 @@ post '/questions/:question_id/answers/:answer_id' do
   @comment = Comment.new(description: params[:description])
   if @comment.save
     @answer.comments << @comment
+    current_user.comments << @comment
     redirect "questions/#{@question.id}/answers/#{@answer.id}"
   else
     @errors = @comment.errors.full_messages
