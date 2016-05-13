@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>Login to TravelOverflow</h1>
+
+  <div class="profile-container">
+  <div class="orange-underline">
+  <h1 class="blue">Login to Travel Overflow!</h1>
+  </div>
+  </div>
 
 <% if @errors %>
   <% @errors.each do |error| %>
@@ -7,14 +12,18 @@
   <% end %>
 <% end %>
 
+<div class="sign-form-container">
+
 <form action = "/login" method = "POST">
-  <input type = "text" name= "username" placeholder = "username">
-  <input type = "password" name = "password" placeholder = "password">
-  <input type = "submit" value = "Login">
+  <input type = "text" name= "username" placeholder = "username" class="title-box"><br>
+  <input type = "password" name = "password" placeholder = "password" class="title-box"><br>
+  <input type = "submit" value = "Login" class="register-button">
 </form>
 
-<h3>Not registered?<a href="/users/new"> Sign up now!</a></h3>
+</div>
 
-
+<div class="profile-container">
+  <h3 class="blue">Not registered?<a href="/login" class="orange"> Sign up now!</a></h4>
+</div>
 
 </div>
