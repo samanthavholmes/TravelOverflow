@@ -4,7 +4,7 @@ body {
 .container {
   margin-top: 12em;
   text-align: center;
-  padding-bottom: 5em;
+  padding-bottom: 15em;
 }
 
 #question-form {
@@ -31,6 +31,7 @@ body {
   display: inline;
   margin-top: 0;
 }
+
 .vote-button {
   font-size: 12px;
   display: inline-block;
@@ -40,6 +41,52 @@ body {
 .question-table {
   margin-left: auto;
   margin-right: auto;
+}
+
+
+
+
+/* Question Show Page */
+
+.orange-underline {
+  border-bottom: 5px solid;
+  border-color: #D86E3E;
+  color: #3A5863;
+}
+
+.answer-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  width: 40em;
+  color: #3A5863;
+  line-height: 2em;
+}
+
+.answer-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+.add-question-comment-link a {
+  color: #3A5863;
+}
+
+.add-question-comment-link a:hover {
+  color: #D86E3E;
+}
+
+.comments-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  width: 20em;
+  color: #3A5863;
+  line-height: 2em;
+}
+
+.comments-container ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .question-table td {
@@ -71,15 +118,10 @@ body {
 .question-description {
   margin-left: auto;
   margin-right: auto;
-  width: 55em;
-  padding-right: 5em;
-  padding-left: 5em;
-}
-
-.question-description p {
-  font-size: 120%;
-  color: #3A5863;
+  width: 40em;
   word-wrap: break-word;
+  color: #3A5863;
+  font-size: 120%;
 }
 
 
