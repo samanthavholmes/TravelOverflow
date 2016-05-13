@@ -1,6 +1,6 @@
 <div class= "container">
   <div class="question-title">
-  <h1><%=@question.title%><span class="vote-button"><%= erb :_question_vote_button %></span></h1>
+  <h1><%=@question.title%><% if logged_in? %><span class="vote-button"><%= erb :_question_vote_button %></span><% end %></h1>
   </div>
 
   <p class="question-description"><%=@question.description%></p>
@@ -8,7 +8,9 @@
   <div class="comments-container">
     <h4 class="orange-underline">Comments</h4>
 
+  <% if logged_in? %>
   <a class='add-question-comment-link' href= "#" ><h4 class="white">Add a comment</a></h4>
+  <% end %>
 
   <form action = "/questions/<%=@question.id%>/question_comment" method = "POST" class= "question-comment-form hidden">
     <input id = "#question-comment-description" type ="text" name= "description" placeholder= "Your Comment">
@@ -35,7 +37,9 @@
 
     <ul id= "answer-list">
 
+    <% if logged_in? %>
     <h3><a id= "add-answer-button" href= "#">Add an Answer</a></h3>
+    <% end %>
 
     <form id= "answer-form" action = "/questions/<%=@question.id%>/answers" method = "POST" class= "hidden">
     <input type ="text" name= "description" placeholder= "Your Answer">
@@ -43,24 +47,11 @@
   </form>
 
     <% @answers.each do |answer| %>
-      <div class = "answer" id = "<%=answer.id%>">
+      <div class = "answer">
         <%= erb :'/answers/_individual_answer', locals: {answer: answer, question: @question} %>
-        <span class="vote-button"><%= erb :_answer_vote_button %></span>
-
-      <div class="comments-container">
-
-      <ul class ="answer-comment-list">
-          <% answer.comments.each do |comment| %>
-            <%= erb :'/comments/_individual_comment', locals: {answer: answer, question: @question, comment: comment} %>
-          <% end %>
-        </ul>
-    <% end %>
-    </div>
+        <% end %>
+      </div>
+    </ul>
   </div>
-  </ul>
-    </div>
-
-
-</div>
 
 </div>

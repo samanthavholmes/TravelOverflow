@@ -1,9 +1,19 @@
-<li>
-  <%=answer.description%></li>
+<div class= "add-answer-comment" id = "<%=answer.id%>">
+<br><li><b class="blue"><%=answer.description%></b></li>
 
+<% if logged_in? %>
 <a class= 'add-answer-comment-link' href= "#" >Add a comment to this answer</a><br>
+<% end %>
+
+ <ul class ="answer-comment-list">
+   <% answer.comments.each do |comment| %>
+     <%= erb :'/comments/_individual_comment', locals: {answer: answer, question: @question, comment: comment} %>
+   <% end %>
+ </ul>
 
   <form action = "/questions/<%=question.id%>/answers/<%=answer.id%>/answer_comment" method = "POST" class= "answer-comment-form hidden">
     <input id= "answer-comment-description" type ="text" name= "description" placeholder= "Your Comment">
     <input type ="submit" value= "Submit Comment">
   </form>
+</div>
+

@@ -98,6 +98,16 @@ a:hover {
   color: #D86E3E;
 }
 
+/* BULLET POINTS ========================================================================== */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+}
 /* Text-level semantics
    ========================================================================== */
 

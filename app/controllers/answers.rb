@@ -27,28 +27,3 @@ get '/questions/:question_id/answers/:answer_id/answer' do
     redirect "/questions/#{@question.id}"
   end
 end
-
-# post '/questions/:question_id/answers/:answer_id/answer/upvote' do
-#   @question = Question.find_by(id: params[:question_id])
-#   @answer = Answer.find_by(id: params[:answer_id])
-#   binding.pry
-#   @answer.votes.create(value: 1)
-
-#   if request.xhr?
-#     {points: @answer.points}.to_json
-#   else
-#     redirect "/questions/#{@question.id}"
-#   end
-# end
-
-# post '/questions/:question_id/downvote' do
-#   @question = Question.find_by(id: params[:question_id])
-#   @answer = Answer.find_by(id: params[:answer_id])
-#   @answer.votes.create(value: -1)
-
-#   if request.xhr?
-#     {points: @answer.points}.to_json
-#   else
-#     redirect "/questions/#{@question.id}"
-#   end
-# end

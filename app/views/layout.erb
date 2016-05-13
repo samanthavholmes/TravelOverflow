@@ -32,7 +32,9 @@
 
   <div id="logo-header">
     <a href="/"><img src="../traveloverflow.png" width="507px" height="79,4px"></a>
+    <% if logged_in? %>
     <h3 id="ask-a-question-button"><a href="/questions/new">Ask a Question</a></h3>
+    <% end %>
     <h3 class="questions-button"><a href="/questions">Questions</a></h3>
 
   </div>

@@ -12,10 +12,6 @@ $(document).ready(function() {
       $(".total-points").text(voteObject.points);
     })
   });
-
-
-
-
   $('#ask-a-question-button').on("click", "a", function(e){
     e.preventDefault();
     $('#question-form').show();
@@ -31,10 +27,7 @@ $(document).ready(function() {
       data: data
     });
     ajaxRequest.done(function(response){
-      $('.title-box').val('');
-      $('.description-box').val('');
-      $('#question-form').hide();
-      $('.question-table').prepend(response);
+      $('#question-list').append(response);
     });
   });
     $('#add-answer-button').on("click", function(e){
@@ -58,12 +51,10 @@ $(document).ready(function() {
       $('#answer-list').append(response);
     });
   });
-  $('.answer a').on("click", function(e){
+  $('.add-answer-comment-link').on("click", function(e){
     e.preventDefault();
-    $('.answer-comment-form').hide();
     $(this).hide()
-    $('#' + e.target.parentElement.id + ' form').show();
-    $('.answer a').show();
+    $('#' + this.parentElement.id + ' form').show();
   $('#' + e.target.parentElement.id + ' form').on("submit", function(e){
     e.preventDefault();
     var data = $(e.target).serialize();
@@ -74,12 +65,7 @@ $(document).ready(function() {
       type: type,
       data: data
     }).done(function(response){
-      if (e.target.parentElement.id == 1) {
-        $('ul.answer-comment-list').eq(0).append(response);
-      }
-      else{
-        $('#' + e.target.parentElement.id + ' ul.answer-comment-list').append(response);
-      };
+      $('#' + e.target.parentElement.id).children('ul').append(response);
       $('#' + e.target.parentElement.id + ' form').children('#answer-comment-description').val('');
     });
     });
@@ -105,5 +91,3 @@ $(document).ready(function() {
     });
     });
 });
-
-
