@@ -1,6 +1,6 @@
 <div class= "container">
   <div class="question-title">
-  <h1><%=@question.title%><span class="vote-button"><%= erb :_vote_button %></span></h1>
+  <h1><%=@question.title%><span class="vote-button"><%= erb :_question_vote_button %></span></h1>
   </div>
 
   <p class="question-description"><%=@question.description%></p>
@@ -45,6 +45,7 @@
     <% @answers.each do |answer| %>
       <div class = "answer" id = "<%=answer.id%>">
         <%= erb :'/answers/_individual_answer', locals: {answer: answer, question: @question} %>
+        <span class="vote-button"><%= erb :_answer_vote_button %></span>
 
       <div class="comments-container">
 

@@ -12,6 +12,10 @@ $(document).ready(function() {
       $(".total-points").text(voteObject.points);
     })
   });
+
+
+
+
   $('#ask-a-question-button').on("click", "a", function(e){
     e.preventDefault();
     $('#question-form').show();
