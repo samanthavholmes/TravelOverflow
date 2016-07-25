@@ -9,3 +9,4 @@ Ruby and Sinatra web application. jQuery and AJAX used to enhance user experienc
 ## ToDo
 
 - [ ] AJAX bug fixes 
+- [ ] Host on AWS
