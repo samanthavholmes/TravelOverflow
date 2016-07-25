@@ -4,7 +4,7 @@ A web application, using polymorphic associations, where users can ask travel re
 
 ## Live Walkthrough
 
-![](http://imgur.com/Mvo5xkf)
+![](http://imgur.com/a/5s07T)
 
 ## Technologies
 
