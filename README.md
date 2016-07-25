@@ -4,7 +4,7 @@ A web application, using polymorphic associations, where users can ask travel re
 
 ## Live Walkthrough
 
-![](http://imgur.com/a/5s07T)
+![](https://github.com/samanthavholmes/TravelOverflow/raw/master/traveloverflow.gif)
 
 ## Technologies
 
